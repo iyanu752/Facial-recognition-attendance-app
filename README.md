@@ -18,3 +18,7 @@ This is an application I created for my final year in university
 
 # HOW TO REGISTER A NEW FACE
 A face can be registered by simply placing their picture in the faceAttendance folder
+
+# note
+
+this is done in pycharm and all the dependencies must be installed in order to get it to work
