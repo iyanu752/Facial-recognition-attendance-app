@@ -11,13 +11,13 @@ classNames = []
 myList = os.listdir(path)
 print(myList)
 for cl in myList:
-    currImg = cv2.imread(f'{path}/{cl}')
-    images.append(currImg)
+    curImg = cv2.imread(f'{path}/{cl}')
+    images.append(curImg)
     classNames.append(os.path.splitext(cl)[0])
 print(classNames)
 
 def findEncodings(images):
-    encodeList =[]
+    encodeList = []
     for img in images:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         encode = face_recognition.face_encodings(img)[0]
@@ -73,14 +73,3 @@ while True:
 
 
 
-
-#facLoc = face_recognition.face_locations(imgElon)[0]
-#encodeElon = face_recognition.face_encodings(imgElon)[0]
-#cv2.rectangle(imgElon, (facLoc[3], facLoc[0]), (facLoc[1], facLoc[2]), (255,0,255),2)
-#
-#facLocTest = face_recognition.face_locations(imgTest)[0]
-#encodeTest = face_recognition.face_encodings(imgTest)[0]
-#cv2.rectangle(imgTest, (facLocTest[3], facLocTest[0]), (facLocTest[1], facLocTest[2]), (255,0,255),2)
-#
-#results = face_recognition.compare_faces([encodeElon], encodeTest)
-#faceDis = face_recognition.face_distance([encodeElon], encodeTest)
